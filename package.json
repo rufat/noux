@@ -1,7 +1,8 @@
 {
   "name": "noux",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple, Easy and Fast State Management for React.JS",
+  "homepage": "https://github.com/oop/noux#readme",
   "main": "index.js",
   "directories": {
     "demo": "demo"
@@ -15,6 +16,10 @@
     "test:demo": "cd ./demo/ && npm test",
     "eject:demo": "cd ./demo/ && npm eject"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oop/noux.git"
+  },
   "keywords": [
     "observable",
     "react-component",
@@ -26,6 +31,9 @@
     "state management",
     "data flow"
   ],
-  "author": "Rufat Mammadli",
-  "license": "ISC"
+  "bugs": {
+    "url": "https://github.com/oop/noux/issues"
+  },
+  "author": "Rufat Mammadli <rufatmdl@gmail.com>",
+  "license": "MIT"
 }
