@@ -10,8 +10,7 @@ class App extends Component {
         this.state = {
             welcomeTxt: 'Welcome to Noux!',
             secretVal1: '',
-            secretVal2: '',
-            allData: []
+            secretVal2: ''
         };
         this.noux = new noux({
             log: true

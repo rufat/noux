@@ -8,8 +8,9 @@ Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/j
 
 ### About
 You don't need to implement Reducers, Actions, and other complex concepts to manage the component states. **Noux** is using *Pub/Sub pattern* with **[PubSubJS](https://github.com/mroderick/PubSubJS)** library. It can be used in the **componentDidMount** method.
-Please check the **[demo](https://codesandbox.io/s/l329pr2467?view=preview)**.
 <br/>**Note:** This is an *alpha version* and it still needs some *improvements*.
+
+#### Check the live **[demo](https://codesandbox.io/s/l329pr2467?view=preview)**.
 
 ### Examples
 ##### Import and declare Noux in your main component.
