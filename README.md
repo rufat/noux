@@ -1,18 +1,20 @@
 ![](https://raw.githubusercontent.com/oop/noux/master/demo/public/logo.png)
 
-NOUX
+Noux
 -
 #### Simple, Easy and Fast State Management for React.JS
-##### You don't need to implement Reducers, Actions and other complex concepts for just only manage the states.
+##### You don't need to implement Reducers, Actions, and other complex concepts to manage the component states.
 
 ### Install
     npm i noux --save
 
 ### About
-Noux is using Pub/Sub pattern with [PubSubJS](https://github.com/mroderick/PubSubJS) library. This is a experimental project. Please try the demo react app to understand this library. Please note that this is an experimental concept.
+Noux is using Pub/Sub pattern with [PubSubJS](https://github.com/mroderick/PubSubJS) library.
+Please check the [demo page](https://codesandbox.io/s/l329pr2467) to understand it.
+This is an alpha version. It still needs some improvements.
 
-### Initialization
-##### Import and declare "noux" into your main component.
+### Examples
+##### Import and declare Noux in your main component.
 ```javascript
 import noux from 'noux';
 
@@ -20,20 +22,14 @@ class Main extends Component {
     constructor() {
         super();
         this.noux = new noux({
-            log: true // Optional [default: true]
+            log: false // Optional [default: true]
         });
     }
 }
 ```
 
-### Passing noux
-##### You have to pass noux into your components as props when you declare them.
-```javascript
-<SubComponent noux={this.noux}/>
-```
-
-### Passing noux to the sub components
-##### You have to pass noux into your components as props when you declare them.
+### Initialization in a sub component.
+##### You have to initialization Noux in every new component.
 ```javascript
 class SubComponent extends Component {
     constructor(props) {
@@ -47,8 +43,15 @@ class SubComponent extends Component {
 }
 ```
 
-### Init
-##### To initialize noux you have to call "noux.init" function. You can use this in any component.
+### Passing Noux as props
+##### You have to pass Noux into new components as props.
+```javascript
+<SubComponent noux={this.noux}/>
+```
+
+### Usage
+### init
+##### To initialize Noux you have to call "noux.init" function. You can use this in any component.
 ```javascript
 this.noux.init({
     name: '<current_component_name>',
@@ -56,14 +59,14 @@ this.noux.init({
 });
 ```
 
-### State
-##### By using "state" function you can get the value of specific state from the component.
+### state
+##### Get the value of a specific state from the component.
 ```javascript
 this.noux.state('<component_name>', '<state_name>')
 ```
 
 ### setState
-##### By using "setState" function you can set the value of specific state from the component.
+##### Set the value of a specific state from the component.
 ```javascript
 this.noux.setState({
     target: "<component_name>",
@@ -71,6 +74,12 @@ this.noux.setState({
     value: "<state_value>"
 });
 ```
+
+### Contributing
+* Fork the project.
+* Make your feature addition or bug fix.
+* Send me a pull request.
+
 [Demo](https://codesandbox.io/s/l329pr2467)
 ---
 [![](https://raw.githubusercontent.com/oop/noux/master/img/demo.png)](https://codesandbox.io/s/l329pr2467)
