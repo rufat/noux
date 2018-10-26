@@ -1,0 +1,31 @@
+{
+  "name": "noux",
+  "version": "1.0.0",
+  "description": "Simple, Easy and Fast State Management for React.JS",
+  "main": "index.js",
+  "directories": {
+    "demo": "demo"
+  },
+  "dependencies": {
+    "pubsub-js": "^1.7.0"
+  },
+  "scripts": {
+    "start:demo": "cd ./demo/ && npm start",
+    "build:demo": "cd ./demo/ && npm build",
+    "test:demo": "cd ./demo/ && npm test",
+    "eject:demo": "cd ./demo/ && npm eject"
+  },
+  "keywords": [
+    "observable",
+    "react-component",
+    "react",
+    "reactjs",
+    "reactive",
+    "model",
+    "functional-reactive-programming",
+    "state management",
+    "data flow"
+  ],
+  "author": "Rufat Mammadli",
+  "license": "ISC"
+}
