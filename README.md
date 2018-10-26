@@ -71,7 +71,7 @@ this.noux.setState({
     value: "<state_value>"
 });
 ```
-Check the demo
+[Demo](https://codesandbox.io/s/l329pr2467)
 ---
-![](https://raw.githubusercontent.com/oop/noux/master/img/demo.png)
+[![](https://raw.githubusercontent.com/oop/noux/master/img/demo.png)](https://codesandbox.io/s/l329pr2467)
 ###### Developed by [@rufatmammadli](https://twitter.com/rufatmammadli)
