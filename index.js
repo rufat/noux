@@ -39,6 +39,21 @@ class main {
         }
     };
 
+    all() {
+        try {
+            const t = this.cache;
+            let o = {};
+            for (let k in t) {
+                let s = t[k];
+                if (typeof s === 'object' && typeof s.state === 'object') o[k] = s.state;
+            }
+            return o;
+        } catch (ex) {
+            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   ex: ${ex.toString()}`);
+            return null;
+        }
+    }
+
     state(props) {
         try {
             const isValid = this.componentChecker(this, props.target, {n: props.target, p: props.state});

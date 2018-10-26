@@ -2,15 +2,13 @@
 
 Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/js/noux)
 -
-#### Simple, Easy and Fast State Management for React.JS
-##### You don't need to implement Reducers, Actions, and other complex concepts to manage the component states.
-
+#### 📦 Small, Easy and Fast State Management for React.JS
 ### Install
     npm i noux --save
 
 ### About
-Noux is using *Pub/Sub pattern* with **[PubSubJS](https://github.com/mroderick/PubSubJS)** library. It can be used in the **componentDidMount** method.
-Please check the **[demo page](https://codesandbox.io/s/l329pr2467?view=preview)** to understand it.
+You don't need to implement Reducers, Actions, and other complex concepts to manage the component states. **Noux** is using *Pub/Sub pattern* with **[PubSubJS](https://github.com/mroderick/PubSubJS)** library. It can be used in the **componentDidMount** method.
+Please check the **[demo](https://codesandbox.io/s/l329pr2467?view=preview)**.
 <br/>**Note:** This is an *alpha version* and it still needs some *improvements*.
 
 ### Examples
@@ -50,7 +48,7 @@ class SubComponent extends Component {
 ```
 
 ### Usage
-#### init
+#### init()
 ##### To initialize Noux you have to call "noux.init" function. You can use this in any component.
 ```javascript
 this.noux.init({
@@ -59,13 +57,13 @@ this.noux.init({
 });
 ```
 
-### state
+### state()
 ##### Get the value of a specific state from the component.
 ```javascript
 this.noux.state({target: "<component_name>", state: "<state_name>"})
 ```
 
-### setState
+### setState()
 ##### Set the value of a specific state from the component.
 ```javascript
 this.noux.setState({
@@ -73,6 +71,12 @@ this.noux.setState({
     state: "<state_name>",
     value: "<state_value>"
 });
+```
+
+### all()
+##### Get the all connected components and states as object.
+```javascript
+this.noux.all()
 ```
 
 ### Contributing

@@ -10,7 +10,8 @@ class App extends Component {
         this.state = {
             welcomeTxt: 'Welcome to Noux!',
             secretVal1: '',
-            secretVal2: ''
+            secretVal2: '',
+            allData: []
         };
         this.noux = new noux({
             log: true
@@ -25,6 +26,8 @@ class App extends Component {
     componentDidMount() {
         this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
         this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
+
+        console.warn("Calling the all() method.\n", this.noux.all());
     }
 
     applyBtn() {
