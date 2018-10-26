@@ -1,6 +1,6 @@
 {
-  "short_name": "Noux Demo",
-  "name": "A flexible state management library.",
+  "short_name": "Noux demo",
+  "name": "Simple, Easy and Fast State Management for React.JS",
   "icons": [
     {
       "src": "favicon.ico",

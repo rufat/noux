@@ -23,8 +23,8 @@ class App extends Component {
     }
 
     componentDidMount() {
-        this.setState({secretVal1: this.noux.state('compA', 'message')});
-        this.setState({secretVal2: this.noux.state('compB', 'message')});
+        this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
+        this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
     }
 
     applyBtn() {

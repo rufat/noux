@@ -9,9 +9,9 @@ Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/j
     npm i noux --save
 
 ### About
-Noux is using Pub/Sub pattern with [PubSubJS](https://github.com/mroderick/PubSubJS) library.
-Please check the [demo page](https://codesandbox.io/s/l329pr2467) to understand it.
-This is an alpha version. It still needs some improvements.
+Noux is using *Pub/Sub pattern* with **[PubSubJS](https://github.com/mroderick/PubSubJS)** library. It can be used in the **componentDidMount** method.
+Please check the **[demo page](https://codesandbox.io/s/l329pr2467?view=preview)** to understand it.
+<br/>**Note:** This is an *alpha version* and it still needs some *improvements*.
 
 ### Examples
 ##### Import and declare Noux in your main component.
@@ -62,7 +62,7 @@ this.noux.init({
 ### state
 ##### Get the value of a specific state from the component.
 ```javascript
-this.noux.state('<component_name>', '<state_name>')
+this.noux.state({target: "<component_name>", state: "<state_name>"})
 ```
 
 ### setState
@@ -80,7 +80,5 @@ this.noux.setState({
 * Make your feature addition or bug fix.
 * Send me a pull request.
 
-[Demo](https://codesandbox.io/s/l329pr2467)
----
-[![](https://raw.githubusercontent.com/oop/noux/master/img/demo.png)](https://codesandbox.io/s/l329pr2467)
+[![Edit l329pr2467](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/l329pr2467?view=preview)
 ###### Developed by [@rufatmammadli](https://twitter.com/rufatmammadli)
