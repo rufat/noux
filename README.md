@@ -1,4 +1,4 @@
-![](demo/public/logo.png)
+![](https://raw.githubusercontent.com/oop/noux/master/demo/public/logo.png)
 
 NOUX
 -
@@ -73,5 +73,5 @@ this.noux.setState({
 ```
 Check the demo
 ---
-![](img/demo.png)
+![](https://raw.githubusercontent.com/oop/noux/master/img/demo.png)
 ###### Developed by [@rufatmammadli](https://twitter.com/rufatmammadli)
