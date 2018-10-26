@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/oop/noux/master/demo/public/logo.png)
 
-Noux
+Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/js/noux)
 -
 #### Simple, Easy and Fast State Management for React.JS
 ##### You don't need to implement Reducers, Actions, and other complex concepts to manage the component states.
