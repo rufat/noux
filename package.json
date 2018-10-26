@@ -1,6 +1,6 @@
 {
   "name": "noux",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple, Easy and Fast State Management for React.JS",
   "main": "index.js",
   "directories": {

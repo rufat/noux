@@ -50,7 +50,7 @@ class SubComponent extends Component {
 ```
 
 ### Usage
-### init
+#### init
 ##### To initialize Noux you have to call "noux.init" function. You can use this in any component.
 ```javascript
 this.noux.init({
