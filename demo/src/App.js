@@ -29,6 +29,11 @@ class App extends Component {
         console.warn("Calling the all() method.\n", this.noux.all());
     }
 
+    getBtn() {
+        this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
+        this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
+    }
+
     applyBtn() {
         this.noux.setState({
             target: "compA",
@@ -72,6 +77,7 @@ class App extends Component {
                     <br/><br/><br/>
                     <div style={{display: 'flex'}}>
                         <button className={'Action-button'} onClick={() => this.applyBtn()}>Apply</button>
+                        <button className={'Action-button'} onClick={() => this.getBtn()}>Update</button>
                         <button className={'Action-button'} onClick={() => this.resetBtn()}>Reset</button>
                     </div>
                 </header>

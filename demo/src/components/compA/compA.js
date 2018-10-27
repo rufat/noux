@@ -7,13 +7,19 @@ class compA extends Component {
 
         this.state = {
             text: "I'm component A.",
-            message: "Message #1"
+            message: "Message #1 (will change in 2 sec.)"
         };
 
         this.noux.init({
             name: 'compA',
             self: this
         });
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({message: "Updated. [A]"})
+        }, 2000)
     }
 
     changeVal() {
