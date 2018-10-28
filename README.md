@@ -15,7 +15,7 @@ Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/j
 ### Usage
 
 #### Declaring Noux
-##### Import and declare Noux in your main component.
+Import and declare Noux in your main component.
 ```javascript
 import noux from 'noux';
 
@@ -30,7 +30,7 @@ class Main extends Component {
 ```
 
 #### Initialization in a sub component
-##### Initialize Noux in every new component.
+Initialize Noux in every new component.
 ```javascript
 class SubComponent extends Component {
     constructor(props) {
@@ -45,7 +45,7 @@ class SubComponent extends Component {
 ```
 
 #### Passing Noux as props
-##### Pass Noux into new components as props.
+Pass Noux into new components as props.
 ```javascript
 <SubComponent noux={this.noux}/>
 ```
@@ -53,7 +53,7 @@ class SubComponent extends Component {
 ### Methods
 
 #### init()
-##### To initialize Noux you have to call "noux.init" function. You can use this in any component.
+To initialize Noux you have to call "noux.init" function. You can use this in any component.
 ```javascript
 this.noux.init({
     name: '<current_component_name>',
@@ -62,16 +62,24 @@ this.noux.init({
 ```
 
 #### state()
-##### Get the value of a specific state from the component.
+Get the value of a specific state from the component.
+###### Single state:
 ```javascript
 this.noux.state({
     target: "<component_name>",
     state: "<state_name>"
 })
 ```
+###### Multiple states:
+```javascript
+this.noux.state({
+    target: "<component_name>",
+    state: ["<state_one>", "<state_two>", "<state_three>"]
+})
+```
 
 #### setState()
-##### Set the value of a specific state from the component.
+Set the value of a specific state from the component.
 ```javascript
 this.noux.setState({
     target: "<component_name>",
@@ -81,13 +89,13 @@ this.noux.setState({
 ```
 
 #### all()
-##### Get the all connected components and states as object.
+Get the all connected components and states as object.
 ```javascript
 this.noux.all()
 ```
 
 #### revoke()
-##### Remove the connected component from Noux.
+Remove the connected component from Noux.
 ```javascript
 this.noux.revoke({
     target: "<component_name>"

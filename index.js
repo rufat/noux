@@ -27,7 +27,7 @@ class main {
 
     setState(props) {
         try {
-            const isValid = this.componentChecker(this, props.target, props, 'setState');
+            const isValid = this.componentChecker(props.target, props, 'setState');
             if (!isValid.success) {
                 if (this.logs) console.error(isValid.msg);
                 return null;
@@ -41,17 +41,29 @@ class main {
 
     state(props) {
         try {
-            const isValid = this.componentChecker(this, props.target, props, 'state');
+            const isMulti = Array.isArray(props.state);
+            const isValid = this.componentChecker(props.target, props, 'state');
             if (!isValid.success) {
                 if (this.logs) console.error(isValid.msg);
                 return null;
             }
-            if (typeof this.cache[props.target].state[props.state] !== 'undefined') {
-                return this.cache[props.target].state[props.state];
+
+            if(isMulti) {
+                let s = {};
+                for(let k in props.state) {
+                    s[props.state[k]] = this.cache[props.target].state[props.state[k]];
+                }
+                return s;
             } else {
-                if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.invalid_state}`);
-                return null;
+                const s = this.cache[props.target].state[props.state];
+                if (typeof s !== 'undefined') {
+                    return s;
+                } else {
+                    if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.invalid_state}`);
+                    return null;
+                }
             }
+
         } catch (ex) {
             if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   obj: ${props}   ex: ${ex.toString()}`);
             return null;
@@ -75,7 +87,7 @@ class main {
 
     revoke(props) {
         try {
-            const isValid = this.componentChecker(this, props.target, props, 'revoke');
+            const isValid = this.componentChecker(props.target, props, 'revoke');
             if (!isValid.success) {
                 if (this.logs) console.error(isValid.msg);
                 return null;
@@ -89,28 +101,28 @@ class main {
         }
     }
 
-    componentChecker(s, n, p, t) {
+    componentChecker(n, p, t) {
         try {
             p = JSON.stringify(p);
-            if (typeof s.cache[n] !== 'undefined') {
-                if (typeof s.cache[n].state !== 'undefined') {
+            if (typeof this.cache[n] !== 'undefined') {
+                if (typeof this.cache[n].state !== 'undefined') {
                     return {success: true, err: null}
                 } else {
                     return {
                         success: false,
-                        err: `${s.errorList.prefix} ${s.errorList.stateless_component}\n   obj: ${p} | ${t}`
+                        err: `${this.errorList.prefix} ${this.errorList.stateless_component}\n   obj: ${p} | ${t}`
                     }
                 }
             } else {
                 return {
                     success: false,
-                    msg: `${s.errorList.prefix} ${s.errorList.invalid_component}\n   obj: ${p} | ${t}`
+                    msg: `${this.errorList.prefix} ${this.errorList.invalid_component}\n   obj: ${p} | ${t}`
                 };
             }
         } catch (ex) {
             return {
                 success: false,
-                msg: `${s.errorList.prefix} ${s.errorList.internal_error}\n   obj: ${p} | ${t}  ex: ${ex.toString()}`
+                msg: `${this.errorList.prefix} ${this.errorList.internal_error}\n   obj: ${p} | ${t}  ex: ${ex.toString()}`
             };
         }
     }

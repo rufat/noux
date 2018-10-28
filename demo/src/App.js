@@ -26,7 +26,12 @@ class App extends Component {
         this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
         this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
 
-        console.warn("Calling the all() method.\n", this.noux.all());
+        console.warn("Calling the all() method:");
+        console.warn(this.noux.all());
+        console.log("");
+        console.warn("Getting multiple states:");
+        console.warn(this.noux.state({target: "compA", state: ['message', 'text']}));
+        console.warn(this.noux.state({target: "compB", state: ['message', 'text']}));
     }
 
     getBtn() {
