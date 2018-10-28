@@ -20,7 +20,7 @@ class main {
                 this.cache[d.target].setState({[d.variable]: d.value});
             });
         } catch (ex) {
-            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   ex: ${ex.toString()}`);
+            if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.internal_error}\n   ex: ${ex.toString()}`);
             return null;
         }
     }
@@ -34,7 +34,7 @@ class main {
             }
             PubSub.publish("_u", {target: props.target, variable: props.state, value: props.value});
         } catch (ex) {
-            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   obj: ${props}   ex: ${ex.toString()}`);
+            if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.internal_error}\n   obj: ${props}   ex: ${ex.toString()}`);
             return null;
         }
     };
@@ -65,7 +65,7 @@ class main {
             }
 
         } catch (ex) {
-            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   obj: ${props}   ex: ${ex.toString()}`);
+            if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.internal_error}\n   obj: ${props}   ex: ${ex.toString()}`);
             return null;
         }
     };
@@ -80,7 +80,7 @@ class main {
             }
             return o;
         } catch (ex) {
-            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   ex: ${ex.toString()}`);
+            if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.internal_error}\n   ex: ${ex.toString()}`);
             return null;
         }
     }
@@ -96,7 +96,7 @@ class main {
             if (typeof t[props.state] === 'object') delete t[props.target];
             return null;
         } catch (ex) {
-            if (this.logs) console.error(`${self.errorList.prefix} ${self.errorList.internal_error}\n   ex: ${ex.toString()}`);
+            if (this.logs) console.error(`${this.errorList.prefix} ${this.errorList.internal_error}\n   ex: ${ex.toString()}`);
             return null;
         }
     }
