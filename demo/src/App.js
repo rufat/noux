@@ -34,11 +34,6 @@ class App extends Component {
         console.warn(this.noux.state({target: "compB", state: ['message', 'text']}));
     }
 
-    getBtn() {
-        this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
-        this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
-    }
-
     applyBtn() {
         this.noux.setState({
             target: "compA",
@@ -67,6 +62,13 @@ class App extends Component {
     }
 
     render() {
+        setTimeout(() => {
+            this.setState({secretVal1: this.noux.state({target: "compA", state: "message"})});
+        }, 2000);
+        setTimeout(() => {
+            this.setState({secretVal2: this.noux.state({target: "compB", state: "message"})});
+        }, 3000);
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -81,8 +83,7 @@ class App extends Component {
                     this.setState: <CompB noux={this.noux}/>
                     <br/><br/><br/>
                     <div style={{display: 'flex'}}>
-                        <button className={'Action-button'} onClick={() => this.applyBtn()}>Apply</button>
-                        <button className={'Action-button'} onClick={() => this.getBtn()}>Update</button>
+                        <button className={'Action-button'} onClick={() => this.applyBtn()}>Set</button>
                         <button className={'Action-button'} onClick={() => this.resetBtn()}>Reset</button>
                     </div>
                 </header>

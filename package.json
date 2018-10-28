@@ -1,6 +1,6 @@
 {
   "name": "noux",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "📦 Small, Easy and Fast State Management for React.JS",
   "homepage": "https://oop.github.io/noux",
   "main": "index.js",
