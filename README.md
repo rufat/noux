@@ -2,13 +2,13 @@
 
 Noux [![npm version](https://badge.fury.io/js/noux.svg)](https://badge.fury.io/js/noux)
 -
-#### 📦 Small, Easy and Fast State Management for React.JS
+#### 📦 A component container for React.JS
 ### Install
     npm i noux --save
 
 ### About
-**Noux** is using *Pub/Sub pattern* with **[PubSubJS](https://github.com/mroderick/PubSubJS)** library. You don't need to implement Reducers, Actions, and other complex concepts to manage the component states.
-<br/>**Note:** This is an *alpha version* and it still needs some *improvements*.
+**Noux** is a stupidly written component container rather than a state container. Because it stores the whole "this" (stupid idea, right?). Noux uses Pub/Sub pattern ([PubSubJS](https://github.com/mroderick/PubSubJS)). It is not a replacement for Redux like advanced libraries. Please be aware that this is not a production ready library.
+
 
 #### Check the live **[demo](https://codesandbox.io/s/l329pr2467?view=preview)**.
 
